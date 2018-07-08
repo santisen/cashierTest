@@ -22,14 +22,18 @@ typedef struct{
     char direccion[MAX_DIRECCION];
 }cliente;
 
-//Estructura para formato fecha
+/*
+ * @brief Estructura para formato fecha
+ */
 typedef struct{
   size_t dia;
   size_t mes;
   int anio;
 }fecha;
 
-//Estructura de datos para operaciones de cliente
+/*
+ * @brief Estructura de datos para operaciones de cliente
+ */
 typedef struct{
     int idoperacion;
     char tipo;
@@ -73,9 +77,9 @@ int disponible = 100;
 //inicializamos el número de clientes en 0
 size_t numeroClientes=0;
 
-//OTRA FORMA DE CONTAR EL NUMERO DE CLIENTES DEL ARRAY
-//Devuelve el número de elementos del Array Clientes
-//int getLength(cliente array[]);
+/*OTRA FORMA DE CONTAR EL NUMERO DE CLIENTES DEL ARRAY
+*Devuelve el número de elementos del Array Clientes
+int getLength(cliente array[]);*/
 
 //Prototipamos la función de imprimir el menú de preselección
 size_t imprimirPreseleccion();
@@ -330,12 +334,13 @@ void initCartera(cliente carteraClientes[]){
     }
 }
 
+
 /*
  * @brief inicializa un array de 10 operaciones para cada cliente
  * @return array de 10 operaciones
  */
 
-/*void initOperaciones(operacion operacionesCliente[]){
+void initOperaciones(operacion operacionesCliente[]){
     for (size_t i=0;i<MAX_CLIENTES;i++){
         for (size_t n=0;n<MAX_OPERACIONES;n++){
             operacionesCliente[i].idoperacion=0;
@@ -344,10 +349,8 @@ void initCartera(cliente carteraClientes[]){
             operacionesCliente[i].fecha.mes=00;
             operacionesCliente[i].fecha.anio=0000;
         }
-
     }
-
-}*/
+}
 
 
 /*
