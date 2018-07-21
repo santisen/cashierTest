@@ -20,7 +20,10 @@ typedef struct{
     int numcuenta;
     char nombre[MAX_NOMBRE];
     char direccion[MAX_DIRECCION];
+    operacion[MAX_OPERACIONES];
+    int operacionid;
 }cliente;
+
 
 /*
  * @brief Estructura para formato fecha
@@ -38,6 +41,7 @@ typedef struct{
     int idoperacion;
     char tipo;
     fecha fechaoperacion;
+    int cantidadoperacion;
 }operacion;
 
 
@@ -348,6 +352,7 @@ void initOperaciones(operacion operacionesCliente[]){
             operacionesCliente[i].fecha.dia=00;
             operacionesCliente[i].fecha.mes=00;
             operacionesCliente[i].fecha.anio=0000;
+            operacionesCliente[i].cantidadoperacion;
         }
     }
 }
